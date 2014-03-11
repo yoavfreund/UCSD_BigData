@@ -1,0 +1,350 @@
+### Use LaunchNotebookServer.py -h to get a description of all
+    available commands.
+
+bash-3.2$ LaunchNotebookServer.py
+args= {'instance_type': 't1.micro', 'password': None, 'kill': False, 'create_image': None, 'collection': None}
+The regions you are connected to are: [RegionInfo:us-east-1, RegionInfo:cn-north-1, RegionInfo:ap-northeast-1, RegionInfo:eu-west-1, RegionInfo:ap-southeast-1, RegionInfo:ap-southeast-2, RegionInfo:us-west-2, RegionInfo:us-gov-west-1, RegionInfo:us-west-1, RegionInfo:sa-east-1]
+Created Connection= EC2Connection:ec2.us-east-1.amazonaws.com
+time:  09:20:02
+
+Reservation:  Reservation:r-a0d4f481
+instance no.= 0 instance name= Instance:i-334e5f12 DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-b3dbfb92
+instance no.= 1 instance name= Instance:i-3b74651a DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+launching an ec2 instance, instance type= t1.micro , ami= ami-e3f7f98a
+Launched Instance Reservation:r-29dfff08
+time:  09:20:03
+
+Reservation:  Reservation:r-a0d4f481
+instance no.= 0 instance name= Instance:i-334e5f12 DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-b3dbfb92
+instance no.= 1 instance name= Instance:i-3b74651a DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-29dfff08
+instance no.= 2 instance name= Instance:i-ac7c6d8d DNS name =  
+Instance state= pending
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+^C09:20:03 pending 09:20:08 pending 09:20:13 pending 09:20:18 pending 09:20:23 pending 09:20:28 pending 09:20:33 pending
+Traceback (most recent call last) [Pressed ctrl-C]
+  File "./LaunchNotebookServer.py", line 210, in <module>
+    time.sleep(5)
+KeyboardInterrupt
+
+##### Waiting for instance to start running
+
+bash-3.2$ ./LaunchNotebookServer.py
+args= {'instance_type': 't1.micro', 'password': None, 'kill': False, 'create_image': None, 'collection': None}
+The regions you are connected to are: [RegionInfo:us-east-1, RegionInfo:cn-north-1, RegionInfo:ap-northeast-1, RegionInfo:eu-west-1, RegionInfo:ap-southeast-1, RegionInfo:ap-southeast-2, RegionInfo:us-west-2, RegionInfo:us-gov-west-1, RegionInfo:us-west-1, RegionInfo:sa-east-1]
+Created Connection= EC2Connection:ec2.us-east-1.amazonaws.com
+time:  09:20:52
+
+Reservation:  Reservation:r-a0d4f481
+instance no.= 0 instance name= Instance:i-334e5f12 DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-b3dbfb92
+instance no.= 1 instance name= Instance:i-3b74651a DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-29dfff08
+instance no.= 2 instance name= Instance:i-ac7c6d8d DNS name =  ec2-54-234-5-195.compute-1.amazonaws.com
+Instance state= running
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@ec2-54-234-5-195.compute-1.amazonaws.com
+
+ Instance Ready! 09:20:52 running
+To connect to instance, use:
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@ec2-54-234-5-195.compute-1.amazonaws.com
+
+#### Set notebooks password (needs only to be done once)
+
+bash-3.2$ ./LaunchNotebookServer.py -p <password>
+args= {'instance_type': 't1.micro', 'password': 'easyToRememberPassword', 'kill': False, 'create_image': None, 'collection': None}
+The regions you are connected to are: [RegionInfo:us-east-1, RegionInfo:cn-north-1, RegionInfo:ap-northeast-1, RegionInfo:eu-west-1, RegionInfo:ap-southeast-1, RegionInfo:ap-southeast-2, RegionInfo:us-west-2, RegionInfo:us-gov-west-1, RegionInfo:us-west-1, RegionInfo:sa-east-1]
+Created Connection= EC2Connection:ec2.us-east-1.amazonaws.com
+time:  09:21:48
+
+Reservation:  Reservation:r-a0d4f481
+instance no.= 0 instance name= Instance:i-334e5f12 DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-b3dbfb92
+instance no.= 1 instance name= Instance:i-3b74651a DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-29dfff08
+instance no.= 2 instance name= Instance:i-ac7c6d8d DNS name =  ec2-54-234-5-195.compute-1.amazonaws.com
+Instance state= running
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@ec2-54-234-5-195.compute-1.amazonaws.com
+
+ Instance Ready! 09:21:48 running
+To connect to instance, use:
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@ec2-54-234-5-195.compute-1.amazonaws.com
+The authenticity of host 'ec2-54-234-5-195.compute-1.amazonaws.com (54.234.5.195)' can't be established.
+RSA key fingerprint is a9:eb:8e:d6:dd:95:5a:1b:e2:74:be:6b:dd:f5:1a:10.
+
+### First time you connect to a new instance, you need to OK the connection (type yes)
+Are you sure you want to continue connecting (yes/no)? yes 
+inserting sha1:7bff9ec2a605:78ad48fb8e138318653fb13062cc9b44f14bf469 into file /home/ubuntu/.ipython/profile_nbserver/ipython_notebook_config.py
+=== END ===
+
+# Try to start a non-existant collection - generates the list of
+  available collections
+
+bash-3.2$ ./LaunchNotebookServer.py -p easyToRememberPassword -c kk
+args= {'instance_type': 't1.micro', 'password': None, 'kill': False, 'create_image': None, 'collection': 'kk'}
+The regions you are connected to are: [RegionInfo:us-east-1, RegionInfo:cn-north-1, RegionInfo:ap-northeast-1, RegionInfo:eu-west-1, RegionInfo:ap-southeast-1, RegionInfo:ap-southeast-2, RegionInfo:us-west-2, RegionInfo:us-gov-west-1, RegionInfo:us-west-1, RegionInfo:sa-east-1]
+Created Connection= EC2Connection:ec2.us-east-1.amazonaws.com
+time:  09:22:32
+
+Reservation:  Reservation:r-a0d4f481
+instance no.= 0 instance name= Instance:i-334e5f12 DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-b3dbfb92
+instance no.= 1 instance name= Instance:i-3b74651a DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-29dfff08
+instance no.= 2 instance name= Instance:i-ac7c6d8d DNS name =  ec2-54-234-5-195.compute-1.amazonaws.com
+Instance state= running
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@ec2-54-234-5-195.compute-1.amazonaws.com
+
+ Instance Ready! 09:22:32 running
+To connect to instance, use:
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@ec2-54-234-5-195.compute-1.amazonaws.com
+kk
+could not find a notebook collection called kk
+############### Available Notebook collections: ##############
+
+=====   Pandas   =====
+## hrojas-learn-pandas	notebooks/hrojas-learn-pandas/lessons/
+hrojas-learn-pandas/lessons/01 - Exercise.ipynb
+hrojas-learn-pandas/lessons/01 - Lesson.ipynb
+hrojas-learn-pandas/lessons/02 - Exercise.ipynb
+hrojas-learn-pandas/lessons/02 - Lesson.ipynb
+hrojas-learn-pandas/lessons/03 - Exercise.ipynb
+hrojas-learn-pandas/lessons/03 - Lesson.ipynb
+hrojas-learn-pandas/lessons/04 - Exercise.ipynb
+hrojas-learn-pandas/lessons/04 - Lesson.ipynb
+hrojas-learn-pandas/lessons/05 - Lesson.ipynb
+hrojas-learn-pandas/lessons/06 - Lesson.ipynb
+hrojas-learn-pandas/lessons/07 - Lesson.ipynb
+hrojas-learn-pandas/lessons/08 - Lesson.ipynb
+hrojas-learn-pandas/lessons/09 - Lesson.ipynb
+hrojas-learn-pandas/lessons/10 - Lesson.ipynb
+hrojas-learn-pandas/lessons/11 - Lesson.ipynb
+hrojas-learn-pandas/lessons/Cookbook - Compute.ipynb
+hrojas-learn-pandas/lessons/Cookbook - Merge.ipynb
+hrojas-learn-pandas/lessons/Cookbook - Select.ipynb
+hrojas-learn-pandas/lessons/Cookbook - Sort.ipynb
+hrojas-learn-pandas/lessons/Pandas for Excel Developers.ipynb
+hrojas-learn-pandas/lessons/Pandas for SQL Developers.ipynb
+hrojas-learn-pandas/lessons/Python_101.ipynb
+
+## debjan-learn-pandas	notebooks/debjan-learn-pandas/lessons/
+debjan-learn-pandas/lessons/01 - Exercise.ipynb
+debjan-learn-pandas/lessons/01 - Lesson.ipynb
+debjan-learn-pandas/lessons/02 - Exercise.ipynb
+debjan-learn-pandas/lessons/02 - Lesson.ipynb
+debjan-learn-pandas/lessons/03 - Exercise.ipynb
+debjan-learn-pandas/lessons/03 - Lesson.ipynb
+debjan-learn-pandas/lessons/04 - Exercise.ipynb
+debjan-learn-pandas/lessons/04 - Lesson.ipynb
+debjan-learn-pandas/lessons/05 - Lesson.ipynb
+debjan-learn-pandas/lessons/06 - Lesson.ipynb
+debjan-learn-pandas/lessons/07 - Lesson.ipynb
+debjan-learn-pandas/lessons/08 - Lesson.ipynb
+debjan-learn-pandas/lessons/09 - Lesson.ipynb
+debjan-learn-pandas/lessons/10 - Lesson.ipynb
+debjan-learn-pandas/lessons/11 - Lesson.ipynb
+debjan-learn-pandas/lessons/Pandas for Excel Developers.ipynb
+debjan-learn-pandas/lessons/Pandas for SQL Developers.ipynb
+debjan-learn-pandas/lessons/Python_101.ipynb
+
+## jvns-pandas-cookbook	notebooks/jvns-pandas-cookbook/cookbook/
+jvns-pandas-cookbook/cookbook/A quick tour of IPython Notebook.ipynb
+jvns-pandas-cookbook/cookbook/Chapter 1 - Reading from a CSV.ipynb
+jvns-pandas-cookbook/cookbook/Chapter 2 - Selecting data & finding the most common complaint type.ipynb
+jvns-pandas-cookbook/cookbook/Chapter 3 - Which borough has the most noise complaints? (or, more selecting data).ipynb
+jvns-pandas-cookbook/cookbook/Chapter 4 - Find out on which weekday people bike the most with groupby and aggregate.ipynb
+jvns-pandas-cookbook/cookbook/Chapter 5 - Combining dataframes and scraping Canadian weather data.ipynb
+jvns-pandas-cookbook/cookbook/Chapter 6 - String operations! Which month was the snowiest?.ipynb
+jvns-pandas-cookbook/cookbook/Chapter 7 - Cleaning up messy data.ipynb
+jvns-pandas-cookbook/cookbook/Chapter 8 - How to deal with timestamps.ipynb
+jvns-pandas-cookbook/cookbook/Chapter 9 - Loading data from SQL databases.ipynb
+
+====   Machine Learning   ====
+## sklearn		notebooks/sklearn/notebooks/
+sklearn/notebooks/00_Preliminaries.ipynb
+sklearn/notebooks/01_introduction.ipynb
+sklearn/notebooks/02_sklearn_data.ipynb
+sklearn/notebooks/03_machine_learning_101.ipynb
+sklearn/notebooks/04_houses_regression.ipynb
+sklearn/notebooks/05_iris_classification.ipynb
+sklearn/notebooks/06_iris_dimensionality.ipynb
+sklearn/notebooks/07_iris_clustering.ipynb
+sklearn/notebooks/08_linearly_separable.ipynb
+sklearn/notebooks/09_validation_and_testing.ipynb
+sklearn/notebooks/10_digits_classification.ipynb
+sklearn/notebooks/11_photoz_regression.ipynb
+
+## parallel-ml-tutorial		notebooks/parallel-ml-tutorial/solutions/
+parallel-ml-tutorial/notebooks/00 - Tutorial Setup .ipynb
+parallel-ml-tutorial/notebooks/01 - An Introduction to Predictive Modeling in Python.ipynb
+parallel-ml-tutorial/notebooks/02 - Model Selection and Assessment.ipynb
+parallel-ml-tutorial/notebooks/03 - Distributed Model Selection and Assessment.ipynb
+parallel-ml-tutorial/notebooks/04 - Text Feature Extraction for Classification and Clustering.ipynb
+parallel-ml-tutorial/notebooks/05 - Large Scale Text Classification for Sentiment Analysis.ipynb
+parallel-ml-tutorial/notebooks/Model Selection for the Nystroem Method.ipynb
+parallel-ml-tutorial/solutions/00 - Tutorial Setup .ipynb
+parallel-ml-tutorial/solutions/01 - An Introduction to Predictive Modeling in Python.ipynb
+parallel-ml-tutorial/solutions/02 - Model Selection and Assessment.ipynb
+parallel-ml-tutorial/solutions/03 - Distributed Model Selection and Assessment.ipynb
+parallel-ml-tutorial/solutions/04 - Text Feature Extraction for Classification and Clustering.ipynb
+parallel-ml-tutorial/solutions/05 - Large Scale Text Classification for Sentiment Analysis.ipynb
+parallel-ml-tutorial/solutions/Model Selection for the Nystroem Method.ipynb
+
+====   Visualization   ====
+## Visualizing-Crime-Data	notebooks/Visualizing-Crime-Data/
+Visualizing-Crime-Data/Crime123.ipynb
+Visualizing-Crime-Data/JsonDataKBI.ipynb
+
+## ipython-d3		notebooks/ipython-d3/
+ipython_d3_mashup/ipython_13_vis_example/De_Bruijn_VIS.ipynb
+ipython_d3_mashup/ipython_13_vis_example/GDP_CO2_Example.ipynb
+ipython_d3_mashup/ipython_13_vis_example/Word_Ladder_network_vis.ipynb
+
+## ipython_d3_mashup_pre0.13	notebooks/ipython_d3_mashup/pre_0.13/
+ipython_d3_mashup/pre_0.13/BidirectionalComm.ipynb
+ipython_d3_mashup/pre_0.13/example2.ipynb
+ipython_d3_mashup/pre_0.13/example3.ipynb
+ipython_d3_mashup/pre_0.13/example.ipynb
+ipython_d3_mashup/pre_0.13/GDP_CO2_Example.ipynb
+ipython_d3_mashup/pre_0.13/inb_vis_widget_exp.ipynb
+ipython_d3_mashup/pre_0.13/networkx_atlas.ipynb
+ipython_d3_mashup/pre_0.13/Word_Ladder_network_vis.ipynb
+
+## ipython_d3_mashup_post0.13	notebooks/ipython_d3_mashup/ipython_13_vis_example/
+ipython_d3_mashup/ipython_13_vis_example/De_Bruijn_VIS.ipynb
+ipython_d3_mashup/ipython_13_vis_example/GDP_CO2_Example.ipynb
+ipython_d3_mashup/ipython_13_vis_example/Word_Ladder_network_vis.ipynb
+
+## plotly		notebooks/Ipython-plotly/
+Ipython-plotly/Bubble Chart Explorer.ipynb
+Ipython-plotly/MATLAB Bridge.ipynb
+Ipython-plotly/Plotly Quickstart.ipynb
+
+## plotly/more		notebooks/Ipython-plotly/SeeMore/
+Ipython-plotly/SeeMore/Documentation.ipynb
+Ipython-plotly/SeeMore/electricity_disaggregation.ipynb
+Ipython-plotly/SeeMore/IJulia - Multiple Axes, Subplots and Insets.ipynb
+Ipython-plotly/SeeMore/LaTeX with Plotly.ipynb
+Ipython-plotly/SeeMore/MATLAB Quickstart.ipynb
+Ipython-plotly/SeeMore/Multiple Axes, Subplots, and Insets.ipynb
+Ipython-plotly/SeeMore/Pandas + Plotly.ipynb
+Ipython-plotly/SeeMore/Pandas_Plotly.ipynb
+Ipython-plotly/SeeMore/Plotly gets LaTeXy.ipynb
+Ipython-plotly/SeeMore/PyMC + Plotly.ipynb
+Ipython-plotly/SeeMore/Simple Triple Axis - An Alternative to matplotlib's twinx.ipynb
+Ipython-plotly/SeeMore/Stacked, Horizontal Bar Chart Time Series.ipynb
+
+=== END ===
+
+## Start the notebook collection "plotly"
+
+bash-3.2$ ./LaunchNotebookServer.py -c kk[K[Kplotly
+args= {'instance_type': 't1.micro', 'password': None, 'kill': False, 'create_image': None, 'collection': 'plotly'}
+The regions you are connected to are: [RegionInfo:us-east-1, RegionInfo:cn-north-1, RegionInfo:ap-northeast-1, RegionInfo:eu-west-1, RegionInfo:ap-southeast-1, RegionInfo:ap-southeast-2, RegionInfo:us-west-2, RegionInfo:us-gov-west-1, RegionInfo:us-west-1, RegionInfo:sa-east-1]
+Created Connection= EC2Connection:ec2.us-east-1.amazonaws.com
+time:  09:22:45
+
+Reservation:  Reservation:r-a0d4f481
+instance no.= 0 instance name= Instance:i-334e5f12 DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-b3dbfb92
+instance no.= 1 instance name= Instance:i-3b74651a DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-29dfff08
+instance no.= 2 instance name= Instance:i-ac7c6d8d DNS name =  ec2-54-234-5-195.compute-1.amazonaws.com
+Instance state= running
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@ec2-54-234-5-195.compute-1.amazonaws.com
+
+ Instance Ready! 09:22:45 running
+To connect to instance, use:
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@ec2-54-234-5-195.compute-1.amazonaws.com
+plotly
+Launching  notebooks/Ipython-plotly/
+2014-03-11 16:22:48.201 [NotebookApp] Using existing profile dir: u'/home/ubuntu/.ipython/profile_nbserver'
+[NotebookApp] Using MathJax from CDN: https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js
+[NotebookApp] The port 8888 is already in use, trying another random port.
+[NotebookApp] Serving notebooks from local directory: /home/ubuntu/notebooks/Ipython-plotly
+[NotebookApp] The IPython Notebook is running at: https://[all ip addresses on your system]:8889/
+opening https://ec2-54-234-5-195.compute-1.amazonaws.com:8889/
+
+# At this point a browser window will open on your default browser and
+# will connect you with the server. If this is the first time you are
+# connecting to an instance, you will get a message saying "unverified
+# server" and you'll need to click OK.
+# After that, you will get a window in which you need to enter the
+# same password as the one you set above.
+
+# Kill all running notebook servers
+
+bash-3.2$ ./LaunchNotebookServer.py -k
+args= {'instance_type': 't1.micro', 'password': None, 'kill': True, 'create_image': None, 'collection': None}
+The regions you are connected to are: [RegionInfo:us-east-1, RegionInfo:cn-north-1, RegionInfo:ap-northeast-1, RegionInfo:eu-west-1, RegionInfo:ap-southeast-1, RegionInfo:ap-southeast-2, RegionInfo:us-west-2, RegionInfo:us-gov-west-1, RegionInfo:us-west-1, RegionInfo:sa-east-1]
+Created Connection= EC2Connection:ec2.us-east-1.amazonaws.com
+time:  09:24:23
+
+Reservation:  Reservation:r-a0d4f481
+instance no.= 0 instance name= Instance:i-334e5f12 DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-b3dbfb92
+instance no.= 1 instance name= Instance:i-3b74651a DNS name =  
+Instance state= terminated
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@
+
+Reservation:  Reservation:r-29dfff08
+instance no.= 2 instance name= Instance:i-ac7c6d8d DNS name =  ec2-54-234-5-195.compute-1.amazonaws.com
+Instance state= running
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@ec2-54-234-5-195.compute-1.amazonaws.com
+
+ Instance Ready! 09:24:23 running
+To connect to instance, use:
+ssh -i /Users/yoavfreund/.ssh/YoavsKeypair.pem ubuntu@ec2-54-234-5-195.compute-1.amazonaws.com
+closing all notebook servers
+ubuntu     691  0.0  0.2  39528  1368 ?        S    16:21   0:00  \_ su ubuntu -c ipython notebook --profile=nbserver
+killing notebook process 691
+killed 691
+ubuntu     693  0.4  7.7 204588 46660 ?        S    16:21   0:00      \_ /usr/bin/python /usr/local/bin/ipython notebook --profile=nbserver
+killing notebook process 693
+killed 693
+ubuntu    1169  0.9  8.1 206808 49260 ?        S    16:22   0:00 /usr/bin/python /usr/local/bin/ipython notebook --profile=nbserver 1>notebookKernel.out 2>notebookKernel.err &
+killing notebook process 1169
+killed 1169
+=== END ===
+bash-3.2$ exit
+
+Script done on Tue Mar 11 09:24:28 2014
