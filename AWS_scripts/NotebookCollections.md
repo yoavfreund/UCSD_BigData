@@ -55,6 +55,47 @@ jvns-pandas-cookbook/cookbook/Chapter 7 - Cleaning up messy data.ipynb
 jvns-pandas-cookbook/cookbook/Chapter 8 - How to deal with timestamps.ipynb
 jvns-pandas-cookbook/cookbook/Chapter 9 - Loading data from SQL databases.ipynb
 
+==== applications ===
+## NateSilver	  notebooks/538model 
+538model/historical_adjustment.ipynb
+538model/silver_model.ipynb
+
+## open-data	notebooks/working-open-data/notebooks
+Day_02_class_starter.ipynb
+Day_02_completed.ipynb
+Day_04_completed.ipynb
+Day_04_starter.ipynb
+Day_05_plotting.ipynb
+Day_07_array_len_and_multiply.ipynb
+Day_08_basemap_globe_example.ipynb
+Day_08_completed.ipynb
+Day_08_freebase_intro.ipynb
+Day_08_starter.ipynb
+Day_10_A_fixed_width_parsing_completed.ipynb
+Day_10_requests_lxml.ipynb
+Day_14_basemap_redux.ipynb
+Day_14_date_time.ipynb
+Day_14_PfDA_revisited.ipynb
+Day_14_PfDA_starter.ipynb
+Day_15_Sample_Python_Questions.ipynb
+Day_16_PiCloud_intro.ipynb
+Day_17_Midterm_with_Key.ipynb
+Day_18_Common_Crawl.ipynb
+Day_19_CC_etc.ipynb
+Day_20_CommonCrawl_Starter.ipynb
+Day_20_Moving_files_to_PiCloud.ipynb
+Day_21_CommonCrawl_Completed.ipynb
+Day_21_CommonCrawl_Content.ipynb
+Day_21_CommonCrawl_Starter.ipynb
+Day_22_mapping_counties.ipynb
+Day_23.ipynb
+Day_25_dpla.ipynb
+Day_25_Project_Scheduling.ipynb
+Day_25_Prompting_User_For_Input.ipynb
+Day_26_OpenContext.ipynb
+notebook_javascript_examples.ipynb
+vtk_example.ipynb
+
 ====   Machine Learning   ====
 ## sklearn		notebooks/sklearn/notebooks/
 sklearn/notebooks/00_Preliminaries.ipynb
@@ -129,5 +170,6 @@ Ipython-plotly/SeeMore/Plotly gets LaTeXy.ipynb
 Ipython-plotly/SeeMore/PyMC + Plotly.ipynb
 Ipython-plotly/SeeMore/Simple Triple Axis - An Alternative to matplotlib's twinx.ipynb
 Ipython-plotly/SeeMore/Stacked, Horizontal Bar Chart Time Series.ipynb
+
 
 === END ===
