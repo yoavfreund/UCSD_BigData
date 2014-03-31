@@ -36,16 +36,10 @@ Here are the steps you need to follow to achieve this
  your current address to all of the ports.
 
 """
-### AWS credentials: ####
-# Change entries here to match your own #
-aws_access_key_id='Key ID'
-aws_secret_access_key='Key'
-keyPairFile="<~/.ssh/KeyFilename.pem>" # name of file keeping local key
-key_name="key name" # name of keypair (not name of file where key is stored)
-security_groups=['GroupName']
+
+from AWSCredentials import *
 
 ami='ami-0d405764'              # Image configured for big data class
-### End of AWS credentials ####
 
 # ### Definitions of procedures ###
 import boto.ec2
