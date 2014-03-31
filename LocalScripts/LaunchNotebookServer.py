@@ -47,12 +47,6 @@ security_groups=['GroupName']
 ami='ami-0d405764'              # Image configured for big data class
 ### End of AWS credentials ####
 
-aws_access_key_id='AKIAJHFF3QTAKMG4LBBQ'
-aws_secret_access_key='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'
-keyPairFile='/Users/yoavfreund/.ssh/YoavsKeypair.pem' # name of local file storing keypair
-key_name="YoavsKeypair"         # name of keypair on AWS
-security_groups=['YoavsWork']
-
 # ### Definitions of procedures ###
 import boto.ec2
 import time
