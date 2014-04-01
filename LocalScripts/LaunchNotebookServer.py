@@ -36,22 +36,10 @@ Here are the steps you need to follow to achieve this
  your current address to all of the ports.
 
 """
-### AWS credentials: ####
-# Change entries here to match your own #
-aws_access_key_id='Key ID'
-aws_secret_access_key='Key'
-keyPairFile="<~/.ssh/KeyFilename.pem>" # name of file keeping local key
-key_name="key name" # name of keypair (not name of file where key is stored)
-security_groups=['GroupName']
 
-ami='ami-e3f7f98a'              # Image configured for big data class
-### End of AWS credentials ####
+from AWSCredentials import *
 
-aws_access_key_id='AKIAJHFF3QTAKMG4LBBQ'
-aws_secret_access_key='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'
-keyPairFile='/Users/yoavfreund/.ssh/YoavsKeypair.pem' # name of local file storing keypair
-key_name="YoavsKeypair"         # name of keypair on AWS
-security_groups=['YoavsWork']
+ami='ami-0d405764'              # Image configured for big data class
 
 # ### Definitions of procedures ###
 import boto.ec2
@@ -164,16 +152,16 @@ if __name__ == "__main__":
     parser.add_argument('-p','--password',
                         help='Specify password for notebook (if missing=use existing password)')
     parser.add_argument('-t','--instance_type',default='t1.micro',
-                        help='Type of instance to launch, for more info see: https://aws.amazon.com//ec2/instance-types/')
+                        help='Type of instance to launch, Common choices are t1.micro,c1.medium,m3.xlarge, for more info see: https://aws.amazon.com//ec2/instance-types/')
+#Some common choices:
+#              vCPU     ECU	Memory (GiB)	Instance Storage (GB)	Linux/UNIX Usage
+#----------------------------------------------------------------------------------------
+#t1.micro	1	Variable    0.615	 EBS Only	        $0.020 per Hour
+#c1.medium	2	5	    1.7	         1 x 350	        $0.145 per Hour
+#m3.xlarge	4	13	    15	         2 x 40 SSD	        $0.450 per Hour
+#----------------------------------------------------------------------------------------
     parser.add_argument('-k','--kill_all',dest='kill',action='store_true',default=False,
                         help='close all running notebook servers')
-
-    #    parser.add_argument('-m','--mintries', type=int, default=3
-    #                        ,help='the minimal number of tries for a user/part to be considered (default=3)')
-    #    parser.add_argument('-l','--lines', type=int, default=10
-    #                        ,help='the number of output lines generated (default=3)')
-    #    parser.add_argument('-p','--problem',type=int ,default=-1)
-    #    parser.add_argument('-r','--part',type=int ,default=-1)
 
     args = vars(parser.parse_args())
 

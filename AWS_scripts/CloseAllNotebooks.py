@@ -1,11 +1,17 @@
 #!/usr/bin/python
 import subprocess as sp
-import re
+import re,os
 
-ps = sp.Popen(["ps", "aufx"],stdout=sp.PIPE)
+if os.environ['OSE_HOST'] == 'POWER_MACOSX':
+    ps=sp.Popen(["ps", "-x"],stdout=sp.PIPE)
+else:
+    ps = sp.Popen(["ps", "aufx"],stdout=sp.PIPE)
 
 for line in ps.stdout.readlines():
-    match=re.match('ubuntu\s+(\d+)\s.*ipython\ notebook',line)
+    if os.environ['OSE_HOST'] == 'POWER_MACOSX':
+        match=re.match('(\d+)\s.*ipython\ notebook',line)
+    else:
+        match=re.match('ubuntu\s+(\d+)\s.*ipython\ notebook',line)
     if match:
         print line,
         PID=match.group(1)
