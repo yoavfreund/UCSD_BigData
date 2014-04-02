@@ -2,14 +2,14 @@
 import subprocess as sp
 import re,os
 
-if os.environ['OSE_HOST'] == 'POWER_MACOSX':
+if 'OSE_HOST' in os.environ.keys() and os.environ['OSE_HOST'] == 'POWER_MACOSX':
     ps=sp.Popen(["ps", "-x"],stdout=sp.PIPE)
 else:
     ps = sp.Popen(["ps", "aufx"],stdout=sp.PIPE)
 
 for line in ps.stdout.readlines():
-    if os.environ['OSE_HOST'] == 'POWER_MACOSX':
-        match=re.match('(\d+)\s.*ipython\ notebook',line)
+    if 'OSE_HOST' in os.environ.keys() and os.environ['OSE_HOST'] == 'POWER_MACOSX':
+            match=re.match('(\d+)\s.*ipython\ notebook',line)
     else:
         match=re.match('ubuntu\s+(\d+)\s.*ipython\ notebook',line)
     if match:
