@@ -39,7 +39,8 @@ Here are the steps you need to follow to achieve this
 
 from AWSCredentials import *
 
-ami='ami-0d405764'              # Image configured for big data class
+ami='ami-855646ec'              # Image configured for big data class
+# AMI name: DataScience10. These two lines updates 4/1/2014
 
 # ### Definitions of procedures ###
 import boto.ec2
