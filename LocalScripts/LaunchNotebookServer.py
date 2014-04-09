@@ -39,8 +39,8 @@ Here are the steps you need to follow to achieve this
 
 from AWSCredentials import *
 
-ami='ami-112e3d78'              # Image configured for big data class
-# AMI name: DataScience12. These two lines updates 4/3/2014
+ami='ami-278a974e'              # Image configured for big data class
+# AMI name: DataScienceEigenVector. These two lines updates 4/8/2014
 
 # ### Definitions of procedures ###
 import boto.ec2
