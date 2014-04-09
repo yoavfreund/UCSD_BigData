@@ -18,7 +18,7 @@ def parseFile(filename):
     file=open(filename,'r')
     D={}
     for line in file.readlines():
-        match=re.search('\#\#\s(\S+)\s+(\S+)',line)
+        match=re.search('\#\#\#\#\s*__\[(\S+)\]__\s+(\S+)',line)
         if match:
             name=match.group(1); path=match.group(2)
             #check that the path exists.
