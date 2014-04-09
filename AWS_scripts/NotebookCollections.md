@@ -1,4 +1,5 @@
 =====   For Big Data Course ====
+## eigenfaces  notebooks/eigenfaces/
 ## weather  notebooks/weather/
 ## PCA	    notebooks/yoavs_notebooks/sklearn_Yoav/
 ===== Introduction to ipython Notebooks ======
