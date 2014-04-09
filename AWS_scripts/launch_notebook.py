@@ -18,9 +18,10 @@ def parseFile(filename):
     file=open(filename,'r')
     D={}
     for line in file.readlines():
-        match=re.search('\#\#\#\#\s*__\[(\S+)\]__\s+(\S+)',line)
+        match=re.search(r'\#\#\#\#\s*__\[(\S+)\]__\s+(\S+)',line)
         if match:
-            name=match.group(1); path=match.group(2)
+            name=match.group(1); path=root+match.group(2)
+            print name,path
             #check that the path exists.
             if not os.path.isdir(path):
                 print 'Error: name=%s, path %s does not exist as a directory' % (name,path)
@@ -40,7 +41,7 @@ else:
     print name
     if name in D.keys():
         print 'Launching ',D[name] 
-        os.chdir(root+D[name])
+        os.chdir(D[name])
         sp.Popen(['ipython','notebook','--profile=nbserver','1>notebookKernel.out','2>notebookKernel.err','&'])
     else:
         print 'could not find a notebook collection called',name
