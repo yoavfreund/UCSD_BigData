@@ -5,7 +5,7 @@ A basic notebook about PCA analysis
 A notebook demonstrating the use of PCA for analyzing images of faces.
 ####  __[weather]__  BigDataAnalytics/notebooks/weather/  ####
 A notebook demonstrating the use of PCA to the analysis of weather patterns.
-####  __[regression]__  BigDataAnalytics/notebooks/regression/
+####  __[regression]__  BigDataAnalytics/notebooks/regression/ ####
 
 ----
 ## Introduction to ipython Notebooks ##
@@ -55,26 +55,6 @@ A notebook demonstrating the use of PCA to the analysis of weather patterns.
 1. hrojas-learn-pandas/lessons/Pandas for Excel Developers.ipynb
 1. hrojas-learn-pandas/lessons/Pandas for SQL Developers.ipynb
 1. hrojas-learn-pandas/lessons/Python\_101.ipynb
-
-####  __[debjan-learn-pandas]__  notebooks/debjan-learn-pandas/lessons/
-1. debjan-learn-pandas/lessons/01 - Exercise.ipynb
-1. debjan-learn-pandas/lessons/01 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/02 - Exercise.ipynb
-1. debjan-learn-pandas/lessons/02 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/03 - Exercise.ipynb
-1. debjan-learn-pandas/lessons/03 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/04 - Exercise.ipynb
-1. debjan-learn-pandas/lessons/04 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/05 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/06 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/07 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/08 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/09 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/10 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/11 - Lesson.ipynb
-1. debjan-learn-pandas/lessons/Pandas for Excel Developers.ipynb
-1. debjan-learn-pandas/lessons/Pandas for SQL Developers.ipynb
-1. debjan-learn-pandas/lessons/Python\_101.ipynb
 
 ####  __[jvns-pandas-cookbook]__  notebooks/jvns-pandas-cookbook/cookbook/
 1. jvns-pandas-cookbook/cookbook/A quick tour of IPython Notebook.ipynb
@@ -204,4 +184,6 @@ A notebook demonstrating the use of PCA to the analysis of weather patterns.
 1. Ipython-plotly/SeeMore/Simple Triple Axis - An Alternative to matplotlib's twinx.ipynb
 1. Ipython-plotly/SeeMore/Stacked, Horizontal Bar Chart Time Series.ipynb
 
+----
+This description can be browsed, in a more pleasing form, at https://github.com/yoavfreund/UCSD_BigData/blob/master/AWS_scripts/NotebookCollections.md
 ## END ##
