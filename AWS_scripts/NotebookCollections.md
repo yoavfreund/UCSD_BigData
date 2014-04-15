@@ -11,6 +11,8 @@ A notebook demonstrating the use of PCA to the analysis of weather patterns.  **
 Notebooks about linear regression
 ####  __[online]__ UCSD_BigData/notebooks/online/  ####
 A notebook discussing online learning and stochastic gradient descent
+#### __[docs]__  UCSD_BigData/notebooks/docs/
+Documentation Notebooks: the review process and how to use github to do it.
 ----
 ## Introduction to ipython Notebooks ##
 ####  __[ipython]__  ipython/examples/notebooks/
