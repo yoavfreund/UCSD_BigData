@@ -39,8 +39,8 @@ Here are the steps you need to follow to achieve this
 
 from AWSCredentials import *
 
-ami='ami-278a974e'              # Image configured for big data class
-# AMI name: DataScienceEigenVector. These two lines updates 4/8/2014
+ami='ami-c15c44a8'             # Image configured for big data class
+# AMI name: IPython2.0 . These two lines last updated 4/17/2014
 
 # ### Definitions of procedures ###
 import boto.ec2
@@ -147,7 +147,12 @@ if __name__ == "__main__":
     # parse parameters
     parser = argparse.ArgumentParser(description='launch an ec2 instance and then start an ipython notebook server')
     parser.add_argument('-c','--collection',
-                        help='Choice of notebook collection (if non-existant=print out options)')
+                        help="""Choice of notebook collection, there are two options:
+                        1) '@path' an explicit path to the wanted directory, relative to /home/ubuntu\n\n
+                        2) 'name' the name of a collection listed in the markdown file:\n\n
+                              https://github.com/yoavfreund/UCSD_BigData/blob/master/AWS_scripts/NotebookCollections.md\n\n
+                           the name of the collection is given in a pattern of the form __[name]__
+                        """)
     parser.add_argument('-i','--create_image',
                         help='Create an AMI from the current state of the (first) instance')
     parser.add_argument('-p','--password',
