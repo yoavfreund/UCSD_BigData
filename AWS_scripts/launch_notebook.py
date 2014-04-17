@@ -3,8 +3,8 @@ import sys,os
 import subprocess as sp
 import re
 
-root='/home/ubuntu/mywork/UCSD_BigData/'
-filename=root+'AWS_scripts/NotebookCollections.md'
+root='/home/ubuntu/'
+filename=root+'UCSD_BigData/AWS_scripts/NotebookCollections.md'
 
 def printFile(filename):
     file=open(filename,'r')
@@ -21,7 +21,7 @@ def parseFile(filename):
         match=re.search(r'\#\#\#\#\s*__\[(\S+)\]__\s+(\S+)',line)
         if match:
             name=match.group(1); path=root+match.group(2)
-            print name,path
+            #print name,path
             #check that the path exists.
             if not os.path.isdir(path):
                 print 'Error: name=%s, path %s does not exist as a directory' % (name,path)
@@ -34,12 +34,14 @@ def parseFile(filename):
 ### Main ###
 
 if len(sys.argv)<2:
+    print 'not enough parameters:',sys.argv
     printFile(filename)
 else:
+    loc='none'
     name=sys.argv[1]
-    DirectLink=re.match('##(\S+)',name)
+    DirectLink=re.match('@(\S+)',name)
     if DirectLink:
-        loc= '/home/ubuntu/'+DirectLink.group(1)
+        loc= root+DirectLink.group(1)
         print 'Using direct link to location',loc
     else:
         D=parseFile(filename)
@@ -55,5 +57,5 @@ else:
         print ' Directory does not exist!'
     else:
         print 'Launching ',loc
-        os.chdir(D[name])
+        os.chdir(loc)
         sp.Popen(['ipython','notebook','--profile=nbserver','1>notebookKernel.out','2>notebookKernel.err','&'])
