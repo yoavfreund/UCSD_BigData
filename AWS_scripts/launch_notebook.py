@@ -3,8 +3,8 @@ import sys,os
 import subprocess as sp
 import re
 
-root='/home/ubuntu/'
-filename=root+'scripts/NotebookCollections.md'
+root='/home/ubuntu/mywork/UCSD_BigData/'
+filename=root+'AWS_scripts/NotebookCollections.md'
 
 def printFile(filename):
     file=open(filename,'r')
@@ -36,13 +36,24 @@ def parseFile(filename):
 if len(sys.argv)<2:
     printFile(filename)
 else:
-    D=parseFile(filename)
     name=sys.argv[1]
-    print name
-    if name in D.keys():
-        print 'Launching ',D[name] 
+    DirectLink=re.match('##(\S+)',name)
+    if DirectLink:
+        loc= '/home/ubuntu/'+DirectLink.group(1)
+        print 'Using direct link to location',loc
+    else:
+        D=parseFile(filename)
+        if name in D.keys():
+            loc=D[name]
+            print 'Using collection link from',name,'to',loc
+        else:
+            print 'Could not find notebook directory, printing Collection' 
+            printFile(filename)
+
+    print 'Checking if ',loc,'exists as a directory',
+    if not os.path.isdir(loc):
+        print ' Directory does not exist!'
+    else:
+        print 'Launching ',loc
         os.chdir(D[name])
         sp.Popen(['ipython','notebook','--profile=nbserver','1>notebookKernel.out','2>notebookKernel.err','&'])
-    else:
-        print 'could not find a notebook collection called',name
-        printFile(filename)
