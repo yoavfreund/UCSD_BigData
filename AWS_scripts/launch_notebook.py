@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import sys,os
 import subprocess as sp
+import shlex
 import re
 
 root='/home/ubuntu/'
@@ -58,4 +59,10 @@ else:
     else:
         print 'Launching ',loc
         os.chdir(loc)
-        sp.Popen(['ipython','notebook','--profile=nbserver','1>notebookKernel.out','2>notebookKernel.err','&'])
+#       command_line='ipython notebook --profile=nbserver &'
+        command_line='ipython notebook --profile=nbserver'
+        command = shlex.split(command_line)
+        print 'current directory:',os.getcwd()
+        print 'Command:',command
+        sp.Popen(command)
+
