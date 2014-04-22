@@ -1,6 +1,12 @@
 ## Notebooks created For Big Data Course ##
+####  __[IOPerformance]__ UCSD_BigData/notebooks/IOPerformance/  ####
+Analysis of the IO-speed achieved by a particular type of instance,
+both in the single-thread and the multi-thread/multi-core
+case. Includes also an introduction to the IPython.parallel package.
+####  __[boto]__ UCSD_BigData/notebooks/boto/ ####
+Notebooks regarding boto: the python API to AWS
 ####  __[docs]__ UCSD_BigData/notebooks/docs/  ####
-Markdown documents 
+Markdown documents regarding the course
 ####  __[PCA]__  UCSD_BigData/notebooks/sklearn_Yoav/  ####
 A basic notebook about PCA analysis  **[HW for 4/15]**
 ####  __[eigenfaces]__  UCSD_BigData/notebooks/eigenfaces/  ####

@@ -9,7 +9,7 @@
 
 ### Security credentials ###
  In order to launch a notebook you need to first establish credentials on AWS. Set these credentials
-by editing the values in the section titled "AWS Credentials" below.
+by editing the values in the file ../../Vault/AWSCredentials.py
 
 Here are the steps you need to follow to achieve this
 
@@ -39,8 +39,8 @@ Here are the steps you need to follow to achieve this
 
 from AWSCredentials import *
 
-ami='ami-c15c44a8'             # Image configured for big data class
-# AMI name: IPython2.0 . These two lines last updated 4/17/2014
+ami='ami-27958e4e'             # Image configured for big data class
+# AMI name: IncreasingDiskSpace. These two lines last updated 4/21/2014
 
 # ### Definitions of procedures ###
 import boto.ec2
@@ -91,6 +91,15 @@ def kill_all_notebooks():
     def emptyCallBack(line): return False
     Send_Command(command,emptyCallBack)
 
+def copy_credentials(LocalDir):
+    def emptyCallBack(line): return False
+    print 'Entered copy_credentials:',LocalDir
+    mkdir=['mkdir','Vault']
+    Send_Command(mkdir,emptyCallBack,dont_wait=True)
+    scp=['scp','-i',keyPairFile,('%s/AWSCredentials.py' % args['Copy_Credentials']),('%s@%s:Vault/' % (login_id,instance.public_dns_name))]
+    print ' '.join(scp)
+    subprocess.call(scp)
+
 def set_password(password):
     if len(password)<6:
         sys.exit('Password must be at least 6 characters long')
@@ -98,9 +107,10 @@ def set_password(password):
     def emptyCallBack(line): return False
     Send_Command(command,emptyCallBack)
 
-def Send_Command(command,callback):
+def Send_Command(command,callback,dont_wait=False):
     init=time.time()
     
+    print 'SendCommand:',' '.join(ssh+command)
     ssh_process = subprocess.Popen(ssh+command,
                                    shell=False,
                                    stdin=subprocess.PIPE,
@@ -122,7 +132,7 @@ def Send_Command(command,callback):
                 matchEnd=re.match('=== END ===',line)
                 if matchEnd:
                     endReached=True
-
+        if dont_wait: endReached=True
         time.sleep(0.01)
 
 def Launch_notebook(name=''):
@@ -168,6 +178,10 @@ if __name__ == "__main__":
 #----------------------------------------------------------------------------------------
     parser.add_argument('-k','--kill_all',dest='kill',action='store_true',default=False,
                         help='close all running notebook servers')
+    parser.add_argument('-d','--disk_size', default=0, type=int,
+                        help='Amount of additional disk space in GB (default 0)')
+    parser.add_argument('-A','--Copy_Credentials',
+                        help='Copy the credentials files to the Vault directory on the AWS instance. Parameter is name of local directory where AWSCredentials.py resides.)')
 
     args = vars(parser.parse_args())
 
@@ -188,11 +202,21 @@ if __name__ == "__main__":
 
     if instance_alive==-1: # if there is no instance that is pending or running, create one
         instance_type=args['instance_type']
-        print 'launching an ec2 instance, instance type=',instance_type,', ami=',ami
+        disk_size=args['disk_size']
+        print 'launching an ec2 instance, instance type=',instance_type,', ami=',ami,', disk size=',disk_size
+
+        bdm = boto.ec2.blockdevicemapping.BlockDeviceMapping()
+        if disk_size>0:
+            dev_sda1 = boto.ec2.blockdevicemapping.EBSBlockDeviceType()
+            dev_sda1.size = disk_size # size in Gigabytes
+            bdm['/dev/sda1'] = dev_sda1 
+
         reservation=conn.run_instances(ami,
                                        key_name=key_name,
                                        instance_type=instance_type,
-                                       security_groups=security_groups)
+                                       security_groups=security_groups,
+                                       block_device_map = bdm)
+
         print 'Launched Instance',reservation
         
         (instances,instance_alive) = report_all_instances()
@@ -221,5 +245,7 @@ if __name__ == "__main__":
         print "creating a new AMI called",args['create_image']
         instance.create_image(args['create_image'])
 
-
+    if(args['Copy_Credentials']!= None):
+       copy_credentials(args['Copy_Credentials'])
+       
 
