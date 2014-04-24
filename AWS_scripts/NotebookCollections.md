@@ -1,25 +1,34 @@
 ## Notebooks created For Big Data Course ##
+####  __[P-values]__  UCSD_BigData/notebooks/P-values/ ####
+A variant of the weather notebook that includes a correction to a mistake and the computation of different p-values for the correlation between variables.
+
 ####  __[IOPerformance]__ UCSD_BigData/notebooks/IOPerformance/  ####
 Analysis of the IO-speed achieved by a particular type of instance,
 both in the single-thread and the multi-thread/multi-core
 case. Includes also an introduction to the IPython.parallel package.
+
 ####  __[boto]__ UCSD_BigData/notebooks/boto/ ####
 Notebooks regarding boto: the python API to AWS
+
 ####  __[docs]__ UCSD_BigData/notebooks/docs/  ####
 Markdown documents regarding the course
+
 ####  __[PCA]__  UCSD_BigData/notebooks/sklearn_Yoav/  ####
 A basic notebook about PCA analysis  **[HW for 4/15]**
+
 ####  __[eigenfaces]__  UCSD_BigData/notebooks/eigenfaces/  ####
 A notebook demonstrating the use of PCA for analyzing images of faces.   **[HW for 4/15]**
+
 ####  __[weather]__  UCSD_BigData/notebooks/weather/  ####
 A notebook demonstrating the use of PCA to the analysis of weather patterns.  **[HW for 4/15]**
+
 ####  __[regression]__  UCSD_BigData/notebooks/regression/ ####
 Notebooks about linear regression
+
 ####  __[online]__ UCSD_BigData/notebooks/online/  ####
 A notebook discussing online learning and stochastic gradient descent
 
 #### __[docs]__  UCSD_BigData/notebooks/docs/ ####
-
 Documentation Notebooks: the review process and how to use github to do it.
 
 ----
