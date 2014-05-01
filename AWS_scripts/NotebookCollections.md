@@ -1,4 +1,7 @@
 ## Notebooks created For Big Data Course ##
+#### __[mrjob]__ UCSD_BigData/notebooks/mrjob// ####
+Notebooks using mrjob to run map-reduce jobs
+
 ####  __[sorting]__  UCSD_BigData/notebooks/sorting/ ####
 A notebook about sorting and it's application in map-reduce and in random sampling
 
