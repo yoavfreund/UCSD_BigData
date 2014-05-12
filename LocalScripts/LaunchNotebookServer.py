@@ -37,8 +37,8 @@ Here are the steps you need to follow to achieve this
 """
 
 from AWSCredentials import *
-ami='ami-a0db3dc8'             # Image configured for big data class
-# AMI name: mrjob. These two lines last updated 5/1/2014
+ami='ami-18d33e70'             # Image configured for big data class
+# AMI name: ERM_Utils These two lines last updated 5/11/2014
 
 # ### Definitions of procedures ###
 import boto.ec2
