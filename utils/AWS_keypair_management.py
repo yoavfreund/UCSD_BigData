@@ -30,12 +30,21 @@ def Get_Working_Credentials(path):
                     print filename,User_Name,Access_Key_Id,Secret_Access_Key
                     if test_key_pair(Access_Key_Id,Secret_Access_Key):
                         print "an active key pair"
-                        if not Access_Key_Id in Key_Table.keys():
-                            Key_Table[Access_Key_Id]=[]
-                        Key_Table[Access_Key_Id].append({
+                        if not User_Name in Key_Table.keys():
+                            Key_Table[User_Name]=[]
+                        Key_Table[User_Name].append({
                             'Access_Key_Id':Access_Key_Id,'Secret_Access_Key':Secret_Access_Key})
                     else:
                         print filename,"an inactive key pair"
                         bad_key_files.append(filename)
     return Key_Table,bad_key_files
-Get_Working_Credentials('../../Vault/')
+
+def insert_creds_into_conf(keypair):
+    try:
+        template=open('/home/ubuntu/UCSD_BigData/utils/mrjob.conf.template').read()
+        filled= template % (keypair['Access_Key_Id'],keypair['Secret_Access_Key'])
+        open('/home/ubuntu/.mrjob.conf','wb').write(filled)
+        return True
+    except Exception, e:
+        print e
+        return False
