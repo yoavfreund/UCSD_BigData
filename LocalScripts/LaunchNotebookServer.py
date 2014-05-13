@@ -72,15 +72,19 @@ def report_all_instances():
         for instance in reservation.instances:
             print 'instance no.=',count,'instance name=',instance,'DNS name = ',instance.public_dns_name
             print 'Instance state=',instance.state
-            if instance_alive==-1:
-                if instance.state =='running' and pending:
-                    instance_alive=count # point to first running instance
-                    pending=False
-                elif instance.state =='pending' and pending:
-                    instance_alive=count # point to first pending instance
-                print 'ssh -i %s %s@%s' % (keyPairFile,login_id,instance.public_dns_name)
-            instances.append(instance)
-            count+=1
+            print 'Instance tags=',len(instance.tags)
+            if len(instance.tags)<2:
+                print 'This looks like a private instance launched by this script!'
+                #This is the private instance, probably launched by this script.
+                if instance_alive==-1 and instance.state != 'terminated':
+                    if instance.state =='running' and pending:
+                        instance_alive=count # point to first running instance
+                        pending=False
+                    elif instance.state =='pending' and pending:
+                        instance_alive=count # point to first pending instance
+                    print 'ssh -i %s %s@%s' % (keyPairFile,login_id,instance.public_dns_name)
+                    instances.append(instance)
+                    count+=1
 
     return (instances,instance_alive)
 

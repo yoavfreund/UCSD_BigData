@@ -1,0 +1,10 @@
+import os
+### AWS credentials: ####
+user_name='%s'
+aws_access_key_id='%s'
+aws_secret_access_key='%s'
+IAM_password='%s'
+keyPairFile='/Users/yoavfreund/.ssh/YoavsKeypair.pem' # name of local file storing keypair
+key_name="YoavsKeypair"         # name of keypair on AWS
+security_groups=['YoavsWork']
+### End of AWS credentials ####
