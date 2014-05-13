@@ -8,7 +8,7 @@ from glob import glob
 import AWS_keypair_management
 import pickle
 
-Vault=os.environ['EC2_VAULT']
+vault=os.environ['EC2_VAULT']
 print 'files in'+ vault+'/* :\n','\n'.join(glob(vault+'/*'))
 
 AWS_KM=AWS_keypair_management.AWS_keypair_management()
