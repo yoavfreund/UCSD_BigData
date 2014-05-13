@@ -8,8 +8,7 @@ from glob import glob
 import AWS_keypair_management
 import pickle
 
-vault=raw_input("where is your vault directory? (full name without / at the end) ")
-#vault='/Users/yoavfreund/BigData/Vault'
+Vault=os.environ['EC2_VAULT']
 print 'files in'+ vault+'/* :\n','\n'.join(glob(vault+'/*'))
 
 AWS_KM=AWS_keypair_management.AWS_keypair_management()
@@ -32,7 +31,7 @@ entry=Creds[ID]
 print 'Using the 0 elements from \n',entry
 key_id=entry['Creds'][0]['Access_Key_Id']
 secret_key=entry['Creds'][0]['Secret_Access_Key']
-password=entry['Passwords'][0]
+# password=entry['Passwords'][0]
 
 security_group=raw_input('What security group do you want to use? ')
 security_groups=[security_group]
