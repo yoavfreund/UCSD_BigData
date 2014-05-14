@@ -52,7 +52,8 @@ ami='ami-18d33e70'             # Image configured for big data class
 try:
     vault=os.environ['EC2_VAULT']
     file=open(vault+'/Creds.pkl')
-    Creds=pickle.load(file)
+    ALL_Creds=pickle.load(file)
+    Creds=ALL_Creds['launcher']
     print Creds
     aws_access_key_id=Creds['key_id']
     aws_secret_access_key=Creds['secret_key']
