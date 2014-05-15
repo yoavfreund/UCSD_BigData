@@ -6,6 +6,7 @@
 #             use your own ec2 instance.
 # 'mrjob' - The credentials needed to submit a job to EMR through mrjob
 # 'admin' - The credentials needed to administrate a mrjob job flow.
+#           This set is for administrators only, students can ignore them.
 
 Creds={'launcher':{'ID':'',\
                    'key_id':'',\

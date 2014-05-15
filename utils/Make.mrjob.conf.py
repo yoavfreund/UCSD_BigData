@@ -8,7 +8,9 @@ else:  # If EC2_VAULT is not defined, we assume we are in an EC2 instance
 try:
     with open(vault+'/Creds.pkl') as file:
         Creds=pickle.load(file)
+    print 'Creds=',Creds
     keypair=Creds['mrjob']
+    print 'keypair=',keypair
     template=open('mrjob.conf.template').read()
     filled= template % (keypair['key_id'],keypair['secret_key'])
     home=os.environ['HOME']
