@@ -1,0 +1,218 @@
+﻿Student        Github Repository
+Chen, Si        dennis910130
+Calculate Counts:
+http://nbviewer.ipython.org/github/dennis910130/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Step1.Count%20valid%20years.ipynb
+Partition:
+http://nbviewer.ipython.org/github/dennis910130/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Step2.Partition.ipynb
+PCA and merge:
+http://nbviewer.ipython.org/github/dennis910130/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Step3.PCA.ipynb
+
+Chen, Xintao        https://github.com/lovinganfield
+http://nbviewer.ipython.org/github/lovinganfield/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Homework%202.ipynb
+
+
+Fan, Yue        74s0nf
+http://nbviewer.ipython.org/github/74s0nf/bigdata_hw2/blob/master/hw2.ipynb
+
+Ge, Li        https://github.com/lge88
+http://nbviewer.ipython.org/github/lge88/UCSD_BigData/blob/master/notebooks/lge-hw2/nb_mr_weather.ipynb
+
+
+http://lge88.github.io/weather-map/
+
+
+He, Ruining        https://github.com/lvzaihefang
+http://nbviewer.ipython.org/github/lvzaihefang/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Initial%20Analysis%20and%20Filtering%20of%20the%20Raw%20Weather%20Data.ipynb
+
+
+http://nbviewer.ipython.org/github/lvzaihefang/UCSD_BigData/blob/master/notebooks/weather.mapreduce/PCA%20Analysis%20and%20Group%20Merging.ipynb
+
+
+Jain, Suvir        suvir        
+http://nbviewer.ipython.org/github/suvir/UCSD_BigData/blob/master/notebooks/HW2/Exploratory%20Data%20Analysis.ipynb
+http://nbviewer.ipython.org/github/suvir/UCSD_BigData/blob/master/notebooks/HW2/Heirarchical%20Partitioning.ipynb
+http://nbviewer.ipython.org/github/suvir/UCSD_BigData/blob/master/notebooks/HW2/PCA.ipynb
+
+Jiang, Werner         (https://github.com/woerns/)
+Part 1 - Station & Measurement Statistics
+http://nbviewer.ipython.org/github/woerns/UCSD_BigData/blob/master/notebooks/weather.mapreduce/weather_analysis_mapreduce.ipynb
+Part 2 - Partitioning
+http://nbviewer.ipython.org/github/woerns/UCSD_BigData/blob/master/notebooks/weather.mapreduce/weather_analysis_partitioning.ipynb
+Part 3 - PCA
+http://nbviewer.ipython.org/github/woerns/UCSD_BigData/blob/master/notebooks/weather.mapreduce/weather_analysis_pca.ipynb
+Part 4 - Merging
+http://nbviewer.ipython.org/github/woerns/UCSD_BigData/blob/master/notebooks/weather.mapreduce/weather_analysis_merging.ipynb
+
+
+
+
+Jin, Long        intermilan https://github.com/intermilan
+01_Filter_Data
+http://nbviewer.ipython.org/github/intermilan/UCSD_BigData/blob/master/notebooks/weather.mapreduce/01_Filter_Data.ipynb
+02_Weight_Partition
+http://nbviewer.ipython.org/github/intermilan/UCSD_BigData/blob/master/notebooks/weather.mapreduce/02_Weight_Partition.ipynb
+03_PCA
+http://nbviewer.ipython.org/github/intermilan/UCSD_BigData/blob/master/notebooks/weather.mapreduce/03_PCA.ipynb
+04_Merge
+http://nbviewer.ipython.org/github/intermilan/UCSD_BigData/blob/master/notebooks/weather.mapreduce/04_Merge.ipynb
+
+Jin, Xinxin        stream101        https://github.com/stream101
+Data partitioning: http://nbviewer.ipython.org/github/stream101/UCSD_BigData/blob/master/notebooks/weather.mapreduce/HW2-DataPartitioning.ipynb
+PCA:
+http://nbviewer.ipython.org/github/stream101/UCSD_BigData/blob/master/notebooks/weather.mapreduce/HW2-MRjobPCA.ipynb
+
+Kirby, Michael Craig        mckgamer
+http://nbviewer.ipython.org/github/mckgamer/UCSD_BigData/blob/master/notebooks/weather.mapreduce/HW2%20Weather.ipynb#
+
+Konduru, Vineel Pratap        vineelpratap
+http://nbviewer.ipython.org/github/vineelpratap/UCSD_BigData/blob/master/notebooks/weather_analysis.ipynb
+
+Kurultay, Zeynep Su        zeynepsu
+Preparation of Weights:
+http://nbviewer.ipython.org/github/zeynepsu/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Prepare%20Weights.ipynb
+Partitioning of Data:
+http://nbviewer.ipython.org/github/zeynepsu/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Partition%20Stations.ipynb
+Computations on Partitioned Data:
+http://nbviewer.ipython.org/github/zeynepsu/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Computations%20on%20Data.ipynb
+
+Lisuk, David Michael        dlisuk 
+https://github.com/dlisuk/UCSD_BigData
+Main HW2 Analysis: 
+http://nbviewer.ipython.org/github/dlisuk/UCSD_BigData/blob/master/notebooks/hw2/HW2%20Main.ipynb        
+MR Job Scripts: (not annotated, just used to make data sets)
+http://nbviewer.ipython.org/github/dlisuk/UCSD_BigData/blob/master/notebooks/hw2/Map%20Reduce%20Jobs.ipynb 
+
+
+Ma, Ning        http://nbviewer.ipython.org/github/nimning/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Description%20of%20Assignment.ipynb
+
+
+Myana, Pranay Kumar        pranaykumarm
+http://nbviewer.ipython.org/github/pranaykumarm/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Hierarchical%20Partitioning%20%26%20Analysis.ipynb
+
+Shen, Zhimo        shenzhimo
+http://nbviewer.ipython.org/github/shenzhimo/UCSD_BigData/blob/master/notebooks/weather.mapreduce/assignment2.ipynb
+
+
+
+Singh, Kritika        skritika
+http://nbviewer.ipython.org/github/skritika/UCSD_BigData/blob/master/notebooks/weather.mapreduce/HW2.ipynb
+http://nbviewer.ipython.org/github/skritika/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Hierarchical%20Partitioning.ipynb
+http://nbviewer.ipython.org/github/skritika/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Clustering.ipynb
+
+
+Tumkur, Kashyap Ravi        nonlogic
+http://nbviewer.ipython.org/github/nonlogic/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Homework%202.ipynb
+
+Vekris, Panagiotis        panagosg7
+Preliminaries:
+http://nbviewer.ipython.org/github/panagosg7/UCSD_BigData/blob/master/notebooks/weather.mapreduce/00_Intro.ipynb
+Calculating weights:
+http://nbviewer.ipython.org/github/panagosg7/UCSD_BigData/blob/master/notebooks/weather.mapreduce/01_Station_Weights.ipynb
+Hierarchical indexing structure
+http://nbviewer.ipython.org/github/panagosg7/UCSD_BigData/blob/master/notebooks/weather.mapreduce/02_Hierarchical_Indexing.ipynb
+PCA:
+http://nbviewer.ipython.org/github/panagosg7/UCSD_BigData/blob/master/notebooks/weather.mapreduce/03_PCA.ipynb
+Main loop:
+http://nbviewer.ipython.org/github/panagosg7/UCSD_BigData/blob/master/notebooks/weather.mapreduce/04_Main.ipynb
+
+Wang, Chuan        https://github.com/wchuan/UCSD_BigData
+[HW2]  #1 measurement statistic  #2 Data partition  #3PCA  #4 Relabel    #5 Merge the stations 
+http://nbviewer.ipython.org/github/wchuan/UCSD_BigData/blob/master/notebooks/weather.mapreduce/%5BHW2%5D%20Weather%20Map%20reduce.ipynb
+
+Wang, Qiheng        maxlufs
+Nothing here at 11:20pm (what do you mean)
+
+Wang, Yufei        
+https://github.com/feiyu1990/UCSD_BigData
+
+
+Measurement http://nbviewer.ipython.org/github/feiyu1990/UCSD_BigData/blob/master/notebooks/weather.mapreduce/my_hw.ipynb
+Partition
+http://nbviewer.ipython.org/github/feiyu1990/UCSD_BigData/blob/master/notebooks/weather.mapreduce/my_hw2.ipynb
+PCA
+http://nbviewer.ipython.org/github/feiyu1990/UCSD_BigData/blob/master/notebooks/weather.mapreduce/my_hw3.ipynb
+
+Wei, Wei        w2wei https://github.com/w2wei/UCSD_BigData
+Data preparation
+http://nbviewer.ipython.org/github/w2wei/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Data%20preparation.ipynb
+PCA
+http://nbviewer.ipython.org/github/w2wei/UCSD_BigData/blob/master/notebooks/weather.mapreduce/PCA.ipynb
+Merging Nodes
+http://nbviewer.ipython.org/github/w2wei/UCSD_BigData/blob/master/notebooks/weather.mapreduce/MergingNodes.ipynb
+
+
+
+
+Wen, Jiayi        jwenth47
+[Test on small]
+http://nbviewer.ipython.org/github/jwenth47/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Jiayi_Wen-Test_on_small_data.ipynb
+[Try big]
+http://nbviewer.ipython.org/github/jwenth47/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Jiayi_Wen_try_Large.ipynb
+
+Xie, Saining        s9xie
+http://nbviewer.ipython.org/github/s9xie/291_HW2/blob/master/homework2.ipynb
+
+Yavuz, Semih        semihyavuzz
+http://nbviewer.ipython.org/github/semihyavuzz/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Station_Weights_Calculation.ipynb
+
+
+http://nbviewer.ipython.org/github/semihyavuzz/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Stations_Data_with_Weights.ipynb
+
+
+http://nbviewer.ipython.org/github/semihyavuzz/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Hierarchical_Partitioning.ipynb
+
+
+
+
+Ye, Jingxin        yejingxin
+0. Background: 
+http://nbviewer.ipython.org/github/yejingxin/UCSD_BigData/blob/master/homework/hw2/0.Background.ipynb
+1. Count measurements:
+http://nbviewer.ipython.org/github/yejingxin/UCSD_BigData/blob/master/homework/hw2/1.Count_measurement.ipynb
+2. Calculate the distance from station to coast
+http://nbviewer.ipython.org/github/yejingxin/UCSD_BigData/blob/master/homework/hw2/2.Dist2coast.ipynb
+3. Partition
+http://nbviewer.ipython.org/github/yejingxin/UCSD_BigData/blob/master/homework/hw2/3.Partition.ipynb
+4. PCA
+http://nbviewer.ipython.org/github/yejingxin/UCSD_BigData/blob/master/homework/hw2/4.PCA.ipynb
+
+
+Zarifis, Konstantinos        https://github.com/czarifis
+1. Count weights
+http://nbviewer.ipython.org/github/czarifis/UCSD_BigData/blob/master/notebooks/weather.mapreduce/HWPart1.ipynb
+2.a Group together base-stations based on geographical criteria and run PCA. Do the same thing iteratively 
+http://nbviewer.ipython.org/github/czarifis/UCSD_BigData/blob/master/notebooks/weather.mapreduce/HWPart2.ipynb
+
+
+2.b Use Geospatial data (shp files to perform analysis) to perform the same analysis
+http://nbviewer.ipython.org/github/czarifis/UCSD_BigData/blob/master/notebooks/weather.mapreduce/HWPart2UsingShapefiles.ipynb
+
+
+2.c Use elevation level to group together base-stations to perform the same analysis
+
+
+http://nbviewer.ipython.org/github/czarifis/UCSD_BigData/blob/master/notebooks/weather.mapreduce/HWPart2GroupByElevation.ipynb
+
+
+
+Zhang, Huaipeng        zhpSweden
+Intro:
+http://nbviewer.ipython.org/github/zhpSweden/data/blob/master/Intro_Analysis.ipynb
+Main_Analysis:
+http://nbviewer.ipython.org/github/zhpSweden/data/blob/master/Main%20Analysis.ipynb
+Branch_Filter_Data:
+http://nbviewer.ipython.org/github/zhpSweden/data/blob/master/Branch_Just_Filter_Data.ipynb
+
+Zhang, Jiapeng        JiapengZhang
+
+
+Test on big data:
+http://nbviewer.ipython.org/github/JiapengZhang/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Test_on_big_data.ipynb?create=1
+
+
+Test on small data
+http://nbviewer.ipython.org/github/JiapengZhang/UCSD_BigData/blob/master/notebooks/weather.mapreduce/Test_on_small_data.ipynb?create=1
+
+
+Helge, Jacobsen        elgehelge
+http://nbviewer.ipython.org/github/elgehelge/UCSD_BigData/blob/master/notebooks/weather.mapreduce/HW2/Modelling%20geospatial%20weather%20data%20using%20MapReduce%20-%20291%20Big%20Data%20Analysis%20-%20HW2%20-%20Helge%20Munk%20Jacobsen.ipynb
