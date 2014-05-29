@@ -1,5 +1,8 @@
 ## Notebooks created For Big Data Course ##
 
+#### __[HW2]__ UCSD_BigData/notebooks/HW2/
+Graded HW2 notebooks (in progress)
+
 #### __[streaming]__  UCSD_BigData/notebooks/streaming/
 Streaming and statistical estimation algorithms
 
