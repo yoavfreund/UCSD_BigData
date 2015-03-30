@@ -111,7 +111,7 @@ if __name__ == "__main__":
     command = env + [os.path.join(spark_path, 'ec2/spark-ec2'), '-k', key_name, '-i', keyPairFile, '-r', region]
     conf = ['-z', zone, '-s', str(slaves), '-t', instance_type, '--ebs-vol-size=' + str(hdfs_size)]
     if spot_price:
-        conf.append('--spot-price=' + spot_price)
+        conf.append('--spot-price=' + str(spot_price))
     if not ganglia:
         conf.append('--no-ganglia')
 
