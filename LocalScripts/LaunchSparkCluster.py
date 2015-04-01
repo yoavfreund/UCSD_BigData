@@ -60,7 +60,6 @@ try:
     user_name=Creds['ID']
     keyPairFile=Creds['ssh_key_pair_file'] # name of local file storing keypair
     key_name=Creds['ssh_key_name']         # name of keypair on AWS
-    security_groups=Creds['security_groups'] # security groups for controlling access
 except Exception, e:
     print e
     sys.exit('could not read credentials')
@@ -88,7 +87,7 @@ except Exception, e:
 if __name__ == "__main__":
 
     # parse parameters
-    parser = argparse.ArgumentParser(description='launch a Spark cluster on Amazon EC2 intances')
+    parser = argparse.ArgumentParser(description='launch a Spark cluster on Amazon EC2 instances')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('-l', '--launch', action='store_true',
         help="""Launch a new Spark cluster on Amazon EC2""")
